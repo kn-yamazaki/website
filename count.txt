@@ -1,0 +1,24 @@
+﻿#include <stdio.h>
+#include <unistd.h>
+
+main()
+{
+        long i;
+        int retcode;
+        FILE *fp;
+        char *link="count.link",*count="count.dat";
+        for(i=0;i<5;i++){
+                retcode=symlink(count,link);
+                if(retcode==0) break;
+                sleep(5);
+        }
+        fp=fopen(count,"r+");
+        rewind(fp);
+        fscanf(fp,"%6ld",&i);
+        i++;
+        rewind(fp);
+        fprintf(fp,"%06ld",i);
+        printf("%06ld",i);
+        fclose(fp);
+        unlink(link);
+}
