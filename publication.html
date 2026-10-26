@@ -20,7 +20,17 @@ $(function($){
 </script><!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>	<script src="js/css3-mediaqueries.js"></script>
 <![endif]-->
-  </head>
+  <style>
+.publication-section { margin-bottom:1em; }
+.publication-section > summary {
+  display:list-item; list-style:disclosure-closed inside;
+  cursor:pointer; padding:2px 5px; margin-bottom:.25em;
+  background:#333; color:#fbfbfb; font-size:16px; line-height:1.6;
+}
+.publication-section[open] > summary { list-style-type:disclosure-open; }
+.publication-section > summary:focus-visible { outline:2px solid #13895f; outline-offset:2px; }
+</style>
+</head>
   <body style="background-color: rgba(204, 204, 204, 0.6);">
     <div id="contents">
       <div id="sub">
@@ -48,7 +58,8 @@ $(function($){
 <br>
         <h2>研究業績</h2>
 
-        <h3>学術論文</h3>
+        <details class="publication-section">
+          <summary>学術論文（45編）</summary>
         <div class="table-scroll" role="region" aria-label="表（横にスクロールできます）" tabindex="0">
 <table class="publications"><thead><tr><th>タイトル</th><th>単/共</th><th>発行年月</th><th>発行所</th><th>著者</th></tr></thead><tbody>
             <tr><td>実習授業における非文書化知識の生成AIによる抽出手法</td><td>共著</td><td>2026年9月</td><td>日本産業技術教育学会 技術教育分科会論文集「技術科教育の研究」, 第31巻, pp.28-37</td><td>山﨑一德, 青木祐弥</td></tr>
@@ -100,7 +111,9 @@ $(function($){
 		</tbody>
 		</table>
 </div>
-        <h3>国際会議</h3>
+        </details>
+        <details class="publication-section">
+          <summary>国際会議（19件）</summary>
         <ol>
           <li> Kazunori Yamazaki, Daichi Imaizumi, Yoshifumi Morita, Hiroyuki Ukai, Motoki Nagaya, Takahiro Hayashi, Tadashi Ito, Azusa Kayamoto, Kazutoishi Sugiura, Yoshihito Sakai, Clinical Trial of New Device Somatic Sensation System for the Patient with Postopetrative Spinal Cord Injury, 6th World Congress on Biomechanics (Singapore), WCB-A00436-00578 (2010.8) </li>
           <li> Kenji Komori, Jun Hamasaka, Kazunori Yamazaki, Yoshifumi Morita, Hiroyuki Ukai, Kouji Sanaka, A Newly Developed System to Assess Comprehensive Hand Functions, 6th World Congress on Biomechanics (Singapore), WCB-A01290-02252 (2010.8) </li>
@@ -126,7 +139,9 @@ $(function($){
 
 		
         </ol>
-        <h3>国内会議</h3>
+        </details>
+        <details class="publication-section">
+          <summary>国内会議（81件）</summary>
         <ol>
           <li> 山﨑一德，森田良文，酒井義人，永谷元基，林尊弘，中里千穂，杉浦一俊，鵜飼裕之，脊髄感覚障害患者のための体性感覚回復リハビリシステムの開発 日本機械学会ロボティクス・メカトロニクス講演会 09講演論文集，1A2-M06(1)-(2) (2009.5) </li>
           <li> 森田良文，山﨑一德，鵜飼裕之，永谷元基，林尊弘，伊藤忠，栢本あずさ，杉浦一俊，酒井義人，吉安敏彦，村田淳，小向徹哉，森亮，新美修治，中野智之，里中綾子，高尾恵子，山本光男，酒井昌夫，牧俊一，工学技術を駆使したリハビリ工学連携，第20回愛知県理学療法学術大会抄録集，p.38 (2010.3) </li>
@@ -218,6 +233,7 @@ $(function($){
           <li>松久隆太，不破勝彦，山﨑一德，沖村達也，2次遅れ系における外乱モデルを陽に用いない低次元外乱オブザーバ，令和8年度 電気・電子・情報関係学会 東海支部連合大会 (2026.8)</li>
           <li>杣谷啓, 萩野将広, 山﨑一德, Virtual Reality空間における3Dモデルサイズ知覚評価システムの構築, 日本設計工学会 2026年度秋季大会 研究発表講演会 (2026.9)</li>
 </ol>
+        </details>
         <h3>その他</h3>
         <h4>特許</h4>
         <ol>
