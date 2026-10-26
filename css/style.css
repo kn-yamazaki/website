@@ -550,3 +550,35 @@ footer {
 		float:left;
 	}
 }
+
+/* Long academic tables remain accessible within the content column. */
+.table-scroll {
+  max-width:100%;
+  overflow-x:auto;
+  margin-bottom:1em;
+}
+.table-scroll:focus {
+  outline:2px solid #13895f;
+  outline-offset:2px;
+}
+.table-scroll table { margin-bottom:0; }
+#main th, #main td { overflow-wrap:anywhere; }
+.publications { counter-reset:publication; }
+.publications tbody tr { counter-increment:publication; }
+.publications tbody td:first-child::before {
+  content:counter(publication) ". ";
+  font-weight:bold;
+}
+@media screen and (max-width:767px) {
+  .table-scroll table { min-width:560px; }
+  .table-scroll .publications { min-width:700px; }
+  .copyright { color:#c2cad2; }
+}
+@media print {
+  #contents, #main, footer { width:100%; }
+  #main { float:none; margin:0; padding:0; overflow:visible; }
+  #sub, .footmenu, .totop, .slide { display:none; }
+  .table-scroll { overflow:visible; }
+  .table-scroll table { min-width:0; }
+  tr { break-inside:avoid; }
+}
